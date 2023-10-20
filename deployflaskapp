@@ -1,7 +1,7 @@
 server {
     listen 443 ssl;
     listen 80;
-    server_name deployflask.e-li.me deployflask2.e-li.me;
+    server_name carlosdamiao.cloudns.nz;
 
 location / {
   include proxy_params;
