@@ -10,6 +10,15 @@ def imprimir():
   return jsonify(response)
 
 
+@app.route("/webhook", methods=["POST"])
+def imprimirPix():
+  imprime = print(request.json)
+  data = request.json
+  with open('data.txt', 'a') as outfile:
+      outfile.write("\n")
+      json.dump(data, outfile)
+  return jsonify(imprime)
+
 @app.route("/pix", methods=["POST"])
 def imprimirPix():
   imprime = print(request.json)
@@ -19,9 +28,6 @@ def imprimirPix():
       json.dump(data, outfile)
   return jsonify(imprime)
 
-@app.route("/test", methods=['GET', 'POST'])
-def test():
-    return 'CARLOS O MAIS GATO!'
 
 if __name__ == '__main__':
     app.run()
