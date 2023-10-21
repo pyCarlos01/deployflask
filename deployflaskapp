@@ -3,8 +3,8 @@ server {
     listen 80;
     server_name carlosrifas.cloudns.nz;
 
-location / {
-  include proxy_params;
-  proxy_pass http://unix:/home/ubuntu/deployflask/app.sock;
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/home/ubuntu/deployflask/app.sock;
     }
 }
