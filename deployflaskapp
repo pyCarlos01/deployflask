@@ -1,7 +1,7 @@
 server {
     listen 443 ssl;
     listen 80;
-    server_name carlosdamiao.cloudns.nz;
+    server_name carlosrifas.cloudns.nz;
 
 location / {
   include proxy_params;
