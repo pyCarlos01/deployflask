@@ -11,7 +11,7 @@ def imprimir():
 
 
 @app.route("/webhook", methods=["POST"])
-def imprimirPix():
+def imprimirWebhook():
   imprime = print(request.json)
   data = request.json
   with open('data.txt', 'a') as outfile:
